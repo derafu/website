@@ -1,13 +1,13 @@
 {
     "name": "derafu/website",
-    "description": "Website - Slogan",
+    "description": "Derafu: Website - Base for Derafu's web sites",
     "type": "project",
-    "homepage": "https://derafu.org/site",
+    "homepage": "https://www.derafu.dev/docs/core/website",
     "license": "MIT",
     "authors": [
         {
             "name": "Esteban De La Fuente Rubio / Derafu",
-            "homepage": "https://www.derafu.org"
+            "homepage": "https://www.derafu.dev"
         }
     ],
     "support": {
@@ -26,7 +26,8 @@
     },
     "require": {
         "php": "^8.3",
-        "derafu/site": "dev-main"
+        "derafu/foundation": "dev-main",
+        "derafu/content": "dev-main"
     },
     "require-dev": {
         "ext-xdebug": "*",
@@ -41,19 +42,8 @@
         "phpcs": "vendor/bin/php-cs-fixer fix -v --dry-run --diff --config=php-cs-fixer.php",
         "phpstan": "vendor/bin/phpstan analyse --configuration=phpstan.neon --memory-limit=1G",
         "phpstan-export": "vendor/bin/phpstan analyse --configuration=phpstan.neon --level 9 --generate-baseline",
-        "build": "npm run build",
-        "post-install-cmd": [
-            "Derafu\\Site\\Installer::install"
-        ],
-        "post-update-cmd": [
-            "Derafu\\Site\\Installer::update"
-        ]
+        "build": "npm run build"
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "config": {
-        "allow-plugins": {
-            "composer/installers": true
-        }
-    }
+    "prefer-stable": true
 }

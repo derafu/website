@@ -1,0 +1,26 @@
+{
+  "name": "derafu-website",
+  "version": "1.0.0",
+  "description": "Derafu: Website - Base for Derafu's web sites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/derafu/website.git"
+  },
+  "keywords": [],
+  "author": "Esteban De La Fuente Rubio / Derafu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derafu/website/issues"
+  },
+  "homepage": "https://github.com/derafu/website#readme",
+  "devDependencies": {
+    "vite": "^6.1.1",
+    "vite-plugin-d2": "^1.0.0",
+    "vite-plugin-sharp": "^1.0.0"
+  }
+}
