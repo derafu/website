@@ -1,7 +1,7 @@
 # Base configuration for routes.yaml
 
 imports:
-  - { resource: '../vendor/derafu/content/config/content-routes.yaml' }
+  - { resource: '../vendor/derafu/content/resources/config/content-routes.yaml' }
 
 homepage:
   path: /

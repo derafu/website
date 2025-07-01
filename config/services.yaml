@@ -1,7 +1,7 @@
 # Base configuration for services.yaml
 
 imports:
-  - { resource: '../vendor/derafu/content/config/content-services.yaml' }
+  - { resource: '../vendor/derafu/content/resources/config/content-services.yaml' }
 
 services:
     _defaults:
