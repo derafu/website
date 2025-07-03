@@ -9,6 +9,10 @@ services:
         autoconfigure: true
         public: false
 
+    App\Controller\:
+        resource: '../src/Controller/'
+        public: true
+
     Psr\Http\Server\RequestHandlerInterface:
         class: Derafu\Http\Service\RequestHandler
         public: true
@@ -73,6 +77,7 @@ services:
                 engines: ['twig', 'markdown', 'pdf']
                 extensions:
                     - '@Derafu\Twig\Extension\RoutingExtension'
+                    - '@Derafu\Form\Renderer\FormTwigExtension'
                 paths:
                     - '%kernel.project_dir%/templates'
                     - '%kernel.project_dir%/vendor/derafu/twig/resources/templates'
@@ -81,3 +86,23 @@ services:
     Derafu\Twig\Extension\RoutingExtension:
         arguments:
             $router: '@Derafu\Routing\Contract\RouterInterface'
+
+    Derafu\Form\Renderer\FormTwigExtension: ~
+
+    Derafu\Form\Contract\Renderer\FormRendererInterface:
+        factory: ['Derafu\Form\Factory\FormRendererFactory', 'create']
+
+    Derafu\Form\Contract\Factory\FormFactoryInterface:
+        class: Derafu\Form\Factory\FormFactory
+
+    Derafu\Form\Contract\Type\TypeResolverInterface:
+        class: Derafu\Form\Type\TypeResolver
+
+    Derafu\Form\Type\TypeResolver: ~
+
+    Derafu\Form\Contract\Type\TypeRegistryInterface:
+        class: Derafu\Form\Type\TypeRegistry
+        arguments:
+            $types: '@Derafu\Form\Type\TypeProvider'
+
+    Derafu\Form\Type\TypeProvider: ~

@@ -10,3 +10,7 @@ homepage:
 errorpage:
   path: error
   handler: '%kernel.project_dir%/templates/error.html.twig'
+
+contact:
+  path: /contact
+  handler: 'App\Controller\ContactController::index'
