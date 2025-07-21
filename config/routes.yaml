@@ -14,3 +14,11 @@ errorpage:
 contact:
   path: /contact
   handler: 'App\Controller\ContactController::index'
+
+contact_submit:
+  path: /contact/submit
+  handler: 'App\Controller\ContactController::submit'
+
+contact_success:
+  path: /contact/success
+  handler: 'App\Controller\ContactController::success'
