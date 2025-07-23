@@ -29,7 +29,8 @@
         "derafu/foundation": "dev-main",
         "derafu/content": "dev-main",
         "mpdf/mpdf": "^8.2",
-        "derafu/form": "dev-main"
+        "derafu/form": "dev-main",
+        "derafu/data-processor": "dev-main"
     },
     "require-dev": {
         "ext-xdebug": "*",
