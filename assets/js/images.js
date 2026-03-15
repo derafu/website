@@ -1,1 +1,1 @@
-const images = import.meta.glob('../img/**/*.{png,jpg,jpeg,gif,svg,webp}')
+const images = import.meta.glob('../img/**/*.{png,jpg,jpeg,gif,svg,webp,ico}')
