@@ -37,7 +37,7 @@ export default {
     },
     plugins: [
         vitePluginD2({
-            outputDir: 'assets/img',
+            outputDir: 'assets/img/diagrams',
             layout: 'elk'
         }),
         sharp({

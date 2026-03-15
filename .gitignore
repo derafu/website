@@ -1,4 +1,5 @@
 # PHP files and directories.
+assets/img/diagrams/
 var/
 vendor/
 composer.lock
